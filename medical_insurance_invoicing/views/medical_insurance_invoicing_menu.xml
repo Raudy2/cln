@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!--Action WINDOWS -->
+		<act_window id="action_invoice_report"
+			name="Medical Invoicing Report"
+			res_model="medical.insurance.invoicing.report"
+			view_mode="form"
+			target="new"
+			view_type="form" 
+		/>
+		<!--Menu item -->
+		<menuitem id="menu_billing"
+			name="Billing"
+			action="account.action_invoice_tree1"
+			parent="medical_base.submenu_clinic"
+			sequence="20"
+			/>
+		<menuitem
+			id="medical_insurance_report_submenu"
+			name="Reports"
+			parent="medical_base.menu_clinic"
+			sequence="30"
+			/>
+		<menuitem
+			id="medical_insurance_invoicing_submenu"
+			name="Invoices"
+			parent="medical_insurance_report_submenu"
+			action="action_invoice_report"
+			sequence="30"
+			/>
+	</data>
+</odoo>

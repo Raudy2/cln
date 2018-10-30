@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record id="view_account_invoice_inherit_tree" model="ir.ui.view">
+			<field name="name">account.invoice.tree.inherit</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_tree"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount_total_signed']" position='after'>
+					<field name="amount_covered" sum="Amount Covered"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="view_account_invoice_inherit_form" model="ir.ui.view">
+			<field name="name">account.invoice.form.inherit</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position='after'>
+					<field name="insurance_provider_id" attrs="{'readonly': [('state', '=', 'open')]}"/>
+				</xpath>
+				<xpath expr="//field[@name='amount_untaxed']" position="after">
+					<field name="amount_covered" attrs="{'invisible': [('insurance_provider_id', '=', False)]}"/>
+				</xpath>
+				<xpath  expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position='after'>
+					<field name="coverage"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="view_filter_account_invoice_inherit" model="ir.ui.view">
+			<field name="name">Filter account invoice</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.view_account_invoice_filter"/>
+			<field name="arch" type="xml">
+				<field name="number" position="after">
+					<field name="partner_id"/>
+					<filter
+						name="filter_by_patient"
+						string="Patients"
+						domain="[('partner_id.is_patient', '=', 'True' )]"
+						/>
+				</field>
+			</field>
+		</record>
+
+		<record id="account.action_invoice_tree1" model="ir.actions.act_window">
+			<field name="context">
+				{'search_default_filter_by_patient': 1 }
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,189 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* medical_insurance_invoicing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-09 19:53+0000\n"
+"PO-Revision-Date: 2018-08-09 19:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.view_medical_patient_inherit_form
+msgid "<span class=\"o_stat_text\">Invoiced</span>"
+msgstr "<span class=\"o_stat_text\">Facturado</span>"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_account_invoice_amount_covered
+msgid "Amount covered"
+msgstr "Monto Cubierto"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.menu,name:medical_insurance_invoicing.menu_billing
+msgid "Billing"
+msgstr "Facturación"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.report_medical_clinic_invoice
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.report_medical_clinic_invoice
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_account_invoice_line_coverage
+msgid "Coverage (%)"
+msgstr "Cobertura (%)"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_date_end
+msgid "Date end"
+msgstr "Fecha final"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_date_start
+msgid "Date start"
+msgstr "Fecha de Inicio"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.report_medical_clinic_invoice
+msgid "Generate PDF Report"
+msgstr "Generar Reporte PDF"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model,name:medical_insurance_invoicing.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model,name:medical_insurance_invoicing.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.menu,name:medical_insurance_invoicing.medical_insurance_invoicing_submenu
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_account_invoice_insurance_provider_id
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_insurance_provider_id
+msgid "Medical Insurance Provider"
+msgstr "Proveedor de Seguro Médico"
+
+#. module: medical_insurance_invoicing
+#: model:ir.actions.act_window,name:medical_insurance_invoicing.action_invoice_report
+msgid "Medical Invoicing Report"
+msgstr "Reporte de Facturación Médica"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_patient_id
+msgid "Medical Patient"
+msgstr "Paciente Médico"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.view_medical_patient_inherit_form
+msgid "New Invoice"
+msgstr "Nueva Factura"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.view_filter_account_invoice_inherit
+msgid "Patients"
+msgstr "Pacientes"
+
+#. module: medical_insurance_invoicing
+#: selection:medical.insurance.invoicing.report,type_report:0
+msgid "Per Date Intervals"
+msgstr "Por Intervalo de Fecha"
+
+#. module: medical_insurance_invoicing
+#: selection:medical.insurance.invoicing.report,type_report:0
+msgid "Per Medical Insurance"
+msgstr "Por Seguro Médico"
+
+#. module: medical_insurance_invoicing
+#: selection:medical.insurance.invoicing.report,type_report:0
+msgid "Per Patient"
+msgstr "Por Paciente"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model,name:medical_insurance_invoicing.model_medical_insurance_invoicing_report
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.report_medical_clinic_invoice
+msgid "Report Invoice"
+msgstr "Reporte de Factura"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_type_report
+msgid "Report Type"
+msgstr "Tipo de Reporte"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.view,arch_db:medical_insurance_invoicing.report_medical_clinic_invoice
+msgid "Reporte de facturas por paciente, por seguro y por intervalo de fechas"
+msgstr "Reporte de facturas por paciente, por seguro y por intervalo de fechas"
+
+#. module: medical_insurance_invoicing
+#: model:ir.ui.menu,name:medical_insurance_invoicing.medical_insurance_report_submenu
+msgid "Reports"
+msgstr "Reportes"
+
+#. module: medical_insurance_invoicing
+#: model:ir.model.fields,field_description:medical_insurance_invoicing.field_medical_insurance_invoicing_report_state
+msgid "State"
+msgstr "Estado"
+
+#. module: medical_insurance_invoicing
+#: selection:medical.insurance.invoicing.report,state:0
+msgid "choose"
+msgstr "escoger"
+
+#. module: medical_insurance_invoicing
+#: selection:medical.insurance.invoicing.report,state:0
+msgid "get"
+msgstr "obtener"
+

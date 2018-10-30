@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!--Action WINDOWS -->
+		<record model="ir.actions.act_window" id="action_medical_insurance_provider">
+			<field name="name">Medical Insurance Provider</field>
+			<field name="res_model">medical.insurance.provider</field>
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+
+		<!--Menu item -->
+		<menuitem
+			id="title_medical_insurance_submenu"
+			name="Medical Insurance"
+			parent="medical_base.menu_clinic"
+			action="action_medical_insurance_provider"
+			sequence="30"
+			/>
+		<menuitem
+			id="medical_insurance_providers_submenu"
+			name="Providers"
+			parent="title_medical_insurance_submenu"
+			action="action_medical_insurance_provider"
+			sequence="30"
+			/>
+
+	</data>
+</odoo>

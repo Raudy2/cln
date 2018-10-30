@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record id="view_medical_patient_inherit_form" model="ir.ui.view">
+			<field name="name">medical.patient.form.inherit</field>
+			<field name="model">medical.patient</field>
+			<field name="inherit_id" ref="medical_base.medical_patient_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/div[@name='button_box']" position='inside'>
+					<button name="create_new_invoice" string="New Invoice" type="object" class="oe_stat_button" icon="fa-file-text-o" />
+					<button type="object" class="oe_stat_button" icon="fa-pencil-square-o" name="action_view_partner_invoices" style="margin-top: 1px">
+						<div class="o_form_field o_stat_info">
+							<span class="o_stat_value">
+								<field name="total_invoiced" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+							</span>
+							<span class="o_stat_text">Invoiced</span>
+						</div>
+					</button>
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

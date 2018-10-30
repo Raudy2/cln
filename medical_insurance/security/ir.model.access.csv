@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_medical_insurance_provider,medical.insurance.provider admin access,model_medical_insurance_provider,,1,1,1,1

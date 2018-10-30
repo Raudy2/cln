@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!--Action WINDOWS -->
+		<record model="ir.actions.act_window" id="action_medical_patient">
+			<field name="name">Medical Patient</field>
+			<field name="res_model">medical.patient</field>
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+
+		<!--Menu item -->
+		<menuitem id="menu_clinic"
+			name="Medical Management"
+			sequence="20"
+			/>
+
+		<menuitem id="submenu_clinic"
+			name="Medical Management"
+			parent="menu_clinic"
+			sequence="20"
+			/>
+
+		<menuitem id="menu_patient"
+			name="Patients"
+			action="action_medical_patient"
+			parent="submenu_clinic"
+			sequence="20"
+			/>
+
+	</data>
+</odoo>

@@ -1,0 +1,197 @@
+<odoo>
+	<data>
+		<!-- Partner Kanban View -->
+		<record model="ir.ui.view" id="medical_patient_kanban_view">
+			<field name="name">medical.patient.kanban</field>
+			<field name="model">medical.patient</field>
+			<field name="arch" type="xml">
+				<kanban class="o_res_partner_kanban">
+					<field name="id"/>
+					<field name="is_company"/>
+					<field name="image_small"/>
+					<field name="type"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click o_res_partner_kanban">
+								<div class="o_kanban_image">
+									<t t-if="record.image_small.raw_value">
+										<img t-att-src="kanban_image('medical.patient', 'image_small', record.id.raw_value)"/>
+									</t>
+									<t t-if="!record.image_small.raw_value">
+										<t t-if="record.type.raw_value === 'delivery'">
+											<img t-att-src='_s + "/base/static/src/img/truck.png"'
+												class="o_kanban_image oe_kanban_avatar_smallbox"/>
+										</t>
+										<t t-if="record.type.raw_value === 'invoice'">
+											<img t-att-src='_s + "/base/static/src/img/money.png"'
+												class="o_kanban_image oe_kanban_avatar_smallbox"/>
+										</t>
+										<t t-if="record.type.raw_value != 'invoice' &amp;&amp; record.type.raw_value != 'delivery'">
+											<t t-if="record.is_company.raw_value === true">
+												<img t-att-src='_s + "/base/static/src/img/company_image.png"'/>
+											</t>
+											<t t-if="record.is_company.raw_value === false">
+												<img t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+											</t>
+										</t>
+									</t>
+								</div>
+								<div class="oe_kanban_details">
+									<strong class="o_kanban_record_title oe_partner_heading">
+										<field name="display_name"/>
+									</strong>
+									<div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+									<ul>
+										<li t-if="record.parent_id.raw_value and !record.function.raw_value">
+											<field name="parent_id"/>
+										</li>
+										<li t-if="!record.parent_id.raw_value and record.function.raw_value">
+											<field name="function"/>
+										</li>
+										<li t-if="record.parent_id.raw_value and record.function.raw_value">
+											<field name="function"/>
+											at
+											<field name="parent_id"/>
+										</li>
+										<li t-if="record.city.raw_value and !record.country_id.raw_value">
+											<field name="city"/>
+										</li>
+										<li t-if="!record.city.raw_value and record.country_id.raw_value">
+											<field name="country_id"/>
+										</li>
+										<li t-if="record.city.raw_value and record.country_id.raw_value"><field name="city"/>,
+											<field name="country_id"/>
+										</li>
+										<li>
+											<i class="fa fa-id-card-o" aria-hidden="true"></i>
+											<field name="identification_document"/>
+										</li>
+										<li t-if="record.email.raw_value" class="o_text_overflow">
+											<i class="fa fa-envelope"></i>
+											<field name="email"/>
+										</li>
+										<li>
+											<field name="quantity_invoices" attrs="{'invisible':True}"/>
+										</li>
+										<li t-if="record.phone.raw_value" class="o_text_overflow">
+											<i class="fa fa-mobile"></i>
+											<field name="phone"/>
+										</li>
+									</ul>
+									<div class="oe_kanban_bottom_right">
+										<span class="pull-right text-right">
+											<span class="label label-warning" attrs="{'invisible': [('quantity_invoices', '=', 0)]}">Facturacion abierta</span>
+										</span>
+									</div>
+									<div class="oe_kanban_partner_links"/>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<!-- Patient form view -->
+		<record id="medical_patient_form_view" model="ir.ui.view">
+			<field name="name">medical.patient.form</field>
+			<field name="model">medical.patient</field>
+			<field name="arch" type="xml">
+				<form string="Patient">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+								<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+							</button>
+						</div>
+						<field name="image" widget="image" class="oe_avatar"
+							options="{&quot;preview_image&quot;: &quot;image_medium&quot;, &quot;size&quot;: [90, 90]}"/>
+						<div class="oe_title">
+							<field name="is_company" invisible="1"/>
+							<field name="commercial_partner_id" invisible="1"/>
+							<h1>
+								<field name="name" default_focus="1" placeholder="Name"
+									attrs="{'required' : [('type', '=', 'contact')]}"/>
+							</h1>
+							<div class="o_row">
+								<field name="parent_id" placeholder="Company" invisible="1" domain="[('is_company', '=', True)]"
+									context="{'default_is_company': True}"
+									attrs="{'invisible': ['|', '&amp;', ('is_company','=', True),('parent_id', '=', False),('company_name', '!=', False),('company_name', '!=', '')]}"/>
+								<field name="company_name"
+									attrs="{'invisible': ['|', '|', ('company_name', '=', False), ('company_name', '=', ''), ('is_company', '=', True)]}"/>
+								<button name="create_company" type="object" string="Create company"
+									class="btn btn-sm oe_edit_only fa fa-external-link btn btn-link "
+									attrs="{'invisible': ['|', '|', ('is_company','=', True), ('company_name', '=', ''), ('company_name', '=', False)]}"/>
+							</div>
+						</div>
+
+						<group>
+							<group>
+								<field name="identification_document" placeholder="Identification Document"/>
+								<field name="gender"/>
+								<field name="birthdate_date" placeholder="Birthdate"/>
+							</group>
+							<group>
+								<field name="nationality" placeholder="Nationality"/>
+								<field name="occupation" placeholder="Occupation"/>
+								<field name="social_security_number" placeholder="Social Security Number"/>
+							</group>
+						</group>
+
+						<group>
+							<group>
+								<field name="type" attrs="{'invisible': [('parent_id','=', False)]}" groups="base.group_no_one"/>
+								<label for="street" string="Address"/>
+								<div class="o_address_format">
+									<div class="oe_edit_only">
+										<button name="open_parent" type="object" string="(edit)" class="oe_link"
+											attrs="{'invisible': ['|', ('parent_id', '=', False), ('type', '!=', 'contact')]}"/>
+									</div>
+									<field name="street" placeholder="Street..." class="o_address_street"
+										attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+									<field name="street2" placeholder="Street 2..." class="o_address_street"
+										attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+									<field name="city" placeholder="City" class="o_address_city"
+										attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+									<field name="state_id" class="o_address_state" placeholder="State"
+										options="{&quot;no_open&quot;: True}"
+										attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"
+										context="{'country_id': country_id, 'zip': zip}"/>
+									<field name="zip" placeholder="ZIP" class="o_address_zip"
+										attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+									<field name="country_id" placeholder="Country" class="o_address_country"
+										options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"
+										attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+								</div>
+							</group>
+							<group>
+								<field name="phone" widget="phone"/>
+								<field name="mobile" widget="phone"/>
+								<field name="user_ids" invisible="1"/>
+								<field name="email" widget="email" context="{'gravatar_image': True}"
+									attrs="{'required': [('user_ids','!=', [])]}"/>
+							</group>
+						</group>
+
+						<notebook>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<!-- Patient filter view -->
+		<record id="medical_patient_filter_view" model="ir.ui.view"> 
+			<field name="name">medical.patient.filter</field> 
+			<field name="model">medical.patient</field> 
+			<field name="arch" type="xml"> 
+			<search>
+				<field name="identification_document" />
+				<field name="name"/>
+			</search>
+			</field> 
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,796 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* medical_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-08 16:28+0000\n"
+"PO-Revision-Date: 2018-08-08 16:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "(edit)"
+msgstr "(edit)"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "<span class=\"o_stat_text\">Invoiced</span>"
+msgstr "<span class=\"o_stat_text\">Invoiced</span>"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_kanban_view
+msgid "<span class=\"pull-right text-right\">\n"
+"											<span class=\"label label-warning\" attrs=\"{'invisible': [('quantity_invoices', '=', 0)]}\">Facturacion abierta</span>\n"
+"										</span>"
+msgstr "<span class=\"pull-right text-right\">\n"
+"											<span class=\"label label-warning\" attrs=\"{'invisible': [('quantity_invoices', '=', 0)]}\">Facturacion abierta</span>\n"
+"										</span>"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta por pagar"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta por cobrar"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_activity_ids
+msgid "Activities"
+msgstr "Ocupaciones"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Address"
+msgstr "Dirección"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_type
+msgid "Address Type"
+msgstr "Tipo de dirección"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_bank_account_count
+msgid "Bank"
+msgstr "Banco"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_bank_ids
+msgid "Banks"
+msgstr "Bancos"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_barcode
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: medical_base
+#: model:ir.ui.menu,name:medical_base.menu_billing
+msgid "Billing"
+msgstr "Facturación"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_birthdate_date
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_message_bounce
+msgid "Bounce"
+msgstr "Rebotar"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_channel_ids
+msgid "Channels"
+msgstr "Canales"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Compruebe si el contacto es una empresa, de lo contrario, es una persona"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_customer
+msgid "Check this box if this contact is a customer."
+msgstr "Marque esta casilla si este contacto es un cliente."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "Marque esta casilla si este contacto es un proveedor. Si no está marcado, la gente de compras no lo verá cuando codifique una orden de compra.."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Marque esta casilla si este contacto es un empleado."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_city
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "City"
+msgstr "Ciudad"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_color
+msgid "Color Index"
+msgstr "Indice de color"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Entidad comercial"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Empresas que se refieren a socios"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_company_id
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Company"
+msgstr "Empresa"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_company_name
+msgid "Company Name"
+msgstr "Nombre de empresa"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_commercial_company_name
+msgid "Company Name Entity"
+msgstr "Company Name Entity"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_company_type
+msgid "Company Type"
+msgstr "Tipo de empresa"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_contact_address
+msgid "Complete Address"
+msgstr "Dirección completa"
+
+#. module: medical_base
+#: model:ir.model,name:medical_base.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_child_ids
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_contract_ids
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_contracts_count
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_payment_token_count
+msgid "Count Payment Token"
+msgstr "Cuenta Token de pago"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Contador de la cantidad de correos electrónicos devueltos para este contacto"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_commercial_partner_country_id
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_country_id
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Country"
+msgstr "Ciudad"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Create company"
+msgstr "Crear Compañía"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_credit_limit
+msgid "Credit Limit"
+msgstr "LImite de credito"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Términos de pago del cliente"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Grado de confianza que tiene en este deudor"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_email
+msgid "Email"
+msgstr "Correo"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: medical_base
+#: selection:medical.patient,gender:0
+msgid "Female"
+msgstr "Mujer"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_property_account_position_id
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Formato del correo electronico \"Nombre <email@domain>\""
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_email_formatted
+msgid "Formatted Email"
+msgstr "Correo electrónico con formato"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr "Tiene entradas sin conciliar"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_id
+msgid "ID"
+msgstr "ID"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_im_status
+msgid "IM Status"
+msgstr "IM Status"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_identification_document
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Identification Document"
+msgstr "Documento de identificación"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_image
+msgid "Image"
+msgstr "Imagen"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_industry_id
+msgid "Industry"
+msgstr "Industria"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_ref
+msgid "Internal Reference"
+msgstr "Referencia interna"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_invoice_warn
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_is_company
+msgid "Is a Company"
+msgstr "Es una Compañía"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_customer
+msgid "Is a Customer"
+msgstr "Es un cliente"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_supplier
+msgid "Is a Vendor"
+msgstr "Es un vendedor"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_function
+msgid "Job Position"
+msgstr "Puesto de trabajo"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_journal_item_count
+msgid "Journal Items"
+msgstr "Artículos de diario"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_lang
+msgid "Language"
+msgstr "Lenguaje"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_write_date
+msgid "Last Updated on"
+msgstr "Ultima actualizacion en"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Latest Invoices & Payments Matching Date"
+
+#. module: medical_base
+#: selection:medical.patient,gender:0
+msgid "Male"
+msgstr "Hombre"
+
+#. module: medical_base
+#: model:ir.ui.menu,name:medical_base.menu_clinic
+#: model:ir.ui.menu,name:medical_base.submenu_clinic
+msgid "Medical Management"
+msgstr "Gestión médica"
+
+#. module: medical_base
+#: model:ir.actions.act_window,name:medical_base.action_medical_patient
+#: model:ir.model,name:medical_base.model_medical_patient
+msgid "Medical Patient"
+msgstr "Paciente médico"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_image_medium
+msgid "Medium-sized image"
+msgstr "Imagen de tamaño mediano"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Mensaje para factura"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_mobile
+msgid "Mobile"
+msgstr "Movil"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_name
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_nationality
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Nationality"
+msgstr "Nacionalidad"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "New Invoice"
+msgstr "Nueva Factura"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Next Activity Deadline"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_activity_summary
+msgid "Next Activity Summary"
+msgstr "Next Activity Summary"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_activity_type_id
+msgid "Next Activity Type"
+msgstr "Next Activity Type"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_comment
+msgid "Notes"
+msgstr "Notas"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_quantity_invoices
+msgid "Numero de Facturas"
+msgstr "Numero de Facturas"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_occupation
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Occupation"
+msgstr "Ocupación"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_opt_out
+msgid "Opt-Out"
+msgstr "Opt-Out"
+
+#. module: medical_base
+#: selection:medical.patient,gender:0
+msgid "Other"
+msgstr "Otro"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_parent_name
+msgid "Parent name"
+msgstr "Nombre del padre"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_is_patient
+#: model:ir.model.fields,field_description:medical_base.field_res_partner_is_patient
+#: model:ir.model.fields,field_description:medical_base.field_res_users_is_patient
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: medical_base
+#: model:ir.ui.menu,name:medical_base.menu_patient
+#: model:ir.ui.view,arch_db:medical_base.view_filter_account_invoice_inherit
+msgid "Patients"
+msgstr "Pacientes"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_debit_limit
+msgid "Payable Limit"
+msgstr "Límite de pago"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_payment_token_ids
+msgid "Payment Tokens"
+msgstr "Tokens de pago"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_parent_id
+msgid "Related Company"
+msgstr "Compañía relacionada"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_partner_id
+msgid "Related Partner"
+msgstr "Socio relacionado"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_activity_user_id
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Precios de venta"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_user_id
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_invoice_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_self
+msgid "Self"
+msgstr "Yo"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_partner_share
+msgid "Share Partner"
+msgstr "Compartir socio"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_signup_expiration
+msgid "Signup Expiration"
+msgstr "Caducidad de registro"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_signup_token
+msgid "Signup Token"
+msgstr "Token de inscripción"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_signup_type
+msgid "Signup Token Type"
+msgstr "Tipo de token de registro"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_signup_valid
+msgid "Signup Token is Valid"
+msgstr "El token de inscripción es válido"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_signup_url
+msgid "Signup URL"
+msgstr "URL de inscripción"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_image_small
+msgid "Small-sized image"
+msgstr "Imagen de tamaño pequeño"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_social_security_number
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Social Security Number"
+msgstr "Número de seguro social"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_activity_state
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_state_id
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "State"
+msgstr "Estado"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_street
+msgid "Street"
+msgstr "Calle"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Street 2..."
+msgstr "Calle 2..."
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_street2
+msgid "Street2"
+msgstr "Calle 2"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_vat
+msgid "TIN"
+msgstr "TIN"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_category_id
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr "The fiscal position will determine taxes and accounts used for the partner."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "The internal user that is in charge of communicating with this contact if any."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "This account will be used instead of the default one as the payable account for the current partner"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "This account will be used instead of the default one as the receivable account for the current partner"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr "This payment term will be used instead of the default one for purchase orders and vendor bills"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sales orders and customer invoices"
+msgstr "This payment term will be used instead of the default one for sales orders and customer invoices"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "This pricelist will be used, instead of the default one, for sales to the current partner"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_tz
+msgid "Timezone"
+msgstr "Zona horaria"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_tz_offset
+msgid "Timezone offset"
+msgstr "Timezone offset"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_title
+msgid "Title"
+msgstr "Titulo"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_total_invoiced
+msgid "Total Invoiced"
+msgstr "Total facturado"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_debit
+msgid "Total Payable"
+msgstr "Total a pagar"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_credit
+msgid "Total Receivable"
+msgstr "Total por cobrar"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_credit
+msgid "Total amount this customer owes you."
+msgstr "Cantidad total que este cliente le debe."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Cantidad total que debe pagar a este proveedor."
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_type
+msgid "Used to select automatically the right address according to the context in sales and purchases documents."
+msgstr "Se usa para seleccionar automáticamente la dirección correcta de acuerdo con el contexto en los documentos de ventas y compras."
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Campo de utilidad para expresar la cantidad de moneda"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Condiciones de pago del vendedor"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_website
+msgid "Website"
+msgstr "Sitio Web"
+
+#. module: medical_base
+#: model:ir.model.fields,help:medical_base.field_medical_patient_website
+msgid "Website of Partner or Company"
+msgstr "Sitio web de socio o empresa"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_form_view
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: medical_base
+#: model:ir.model.fields,field_description:medical_base.field_medical_patient_zip
+msgid "Zip"
+msgstr "Zip"
+
+#. module: medical_base
+#: model:ir.ui.view,arch_db:medical_base.medical_patient_kanban_view
+msgid "at"
+msgstr "at"
+

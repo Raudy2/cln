@@ -1,0 +1,28 @@
+<odoo>
+	<data noupdate="1">
+		<record id="api_identification_parameter_1" model="ir.config_parameter">
+			<field name="key">api.identification.email</field>
+			<field name="value"></field>
+		</record>
+
+		<record id="api_identification_parameter_2" model="ir.config_parameter">
+			<field name="key">api.identification.password</field>
+			<field name="value"></field>
+		</record>
+
+		<record id="api_identification_parameter_3" model="ir.config_parameter">
+			<field name="key">api.identification.url.auth</field>
+			<field name="value">http://104.248.4.12:3001/auth</field>
+		</record>
+
+		<record id="api_identification_parameter_4" model="ir.config_parameter">
+			<field name="key">api.identification.url.find.person</field>
+			<field name="value">http://104.248.4.12:3001/identification/{0}</field>
+		</record>
+
+		<record id="api_identification_parameter_5" model="ir.config_parameter">
+			<field name="key">api.identification.url.find.person.name</field>
+			<field name="value">http://104.248.4.12:3001/identification-by-name/{0}</field>
+		</record>
+	</data>
+</odoo>

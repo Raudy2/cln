@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_medical_clinic_invoice" model="ir.ui.view">
+            <field name="name">medical.insurance.invoicing.report.view</field>
+            <field name="model">medical.insurance.invoicing.report</field>
+            <field name="arch" type="xml">
+                <form string="Report Invoice">
+                    <field invisible="1" name="state"/>
+                    <p states="choose">
+                        Reporte de facturas por paciente, por seguro y por intervalo de fechas
+                    </p>
+                    <group col="2">
+                        <field name="type_report" style="width: 70%"/>
+                    </group>
+                    <group col="2" attrs="{'invisible': [('type_report','!=','patient')]}">
+                        <field name="patient_id" style="width: 70%"
+                               attrs="{'required': [('type_report','=','patient')]}"
+                               options="{'no_quick_create': True, 'no_create_edit' : True, 'no_create':True}"/>
+                    </group>
+                    <group col="2" attrs="{'invisible': [('type_report','!=','medical_insurance')]}">
+                        <field name="insurance_provider_id"
+                               attrs="{'required': [('type_report','=','medical_insurance')]}"
+                               style="width: 70%"
+                               options="{'no_quick_create': True, 'no_create_edit' : True, 'no_create':True}"/>
+                    </group>
+                    <group col="4">
+                        <field name="date_start" attrs="{'required': [('type_report','=','interval')]}"/>
+                        <field name="date_end" attrs="{'required': [('type_report','=','interval')]}"/>
+                    </group>
+                    <footer states="choose">
+                        <button string="Generate PDF Report" name="generate_report" type="object" default_focus="1"
+                                class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                    <footer states="get">
+                        <button special="cancel" string="Close" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document" priority="17">
+            <xpath expr="//div[@class='row mt32 mb32']" position="inside">
+                <div class="col-xs-2" t-if="o.insurance_provider_id">
+                    <strong>Insurance:</strong>
+                    <br></br>
+                    <span t-field="o.insurance_provider_id"
+                    />
+                </div>
+            </xpath>
+            <xpath expr="//tbody[@class='invoice_tbody']/tr[@t-foreach='range(max(5-len(o.invoice_line_ids),0))']/td[@t-if='display_discount']"
+                   position="after">
+                <td></td>
+            </xpath>
+            <xpath expr="//table[@name='invoice_line_table']/thead/tr/th[@t-if='display_discount']"
+                   position="after">
+                <th class="text-right">Coverage.(%)</th>
+            </xpath>
+            <xpath expr="//tbody[@class='invoice_tbody']/tr/td[@t-if='display_discount']" position="after">
+                <td class="text-right">
+                    <span t-field="l.coverage"/>
+                </td>
+            </xpath>
+            <xpath expr="//div[@id='total']/div/table/t[@t-as='amount_by_group']" position="after">
+                <td>Amount covered</td>
+                <td>
+                    <span t-field="o.amount_covered"
+                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>
